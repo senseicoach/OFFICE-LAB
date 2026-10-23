@@ -365,7 +365,7 @@ function renderNav(filter = "") {
   const f = filter.trim().toLowerCase();
   const cur = location.hash.startsWith("#script-") ? +location.hash.slice(8) : null;
   const curPart = cur ? (byNum(cur) || {}).part : null;
-  let html = `<button class="home-link" data-home>About this lab</button><a class="home-link drill-link" href="https://senseicoach.github.io/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">📞 Phone Alphabet drill ↗</a>`, any = false;
+  let html = `<button class="home-link" data-home>About this lab</button><a class="home-link drill-link" href="https://executiveclass.ca/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">📞 Phone Alphabet drill ↗</a>`, any = false;
   BOOK.forEach(p => {
     const items = p.scripts.filter(s => !f || (s.title + " " + p.title + " " + fullText(s)).toLowerCase().includes(f));
     if (!items.length) return; any = true;
@@ -404,7 +404,7 @@ function renderHome() {
       <p class="pn">New · Part 9</p>
       <h3>Taking It Down: names, numbers and emails on the phone at work</h3>
       <p>Twelve short calls where Larissa has to write something down: a message for Karen, an order number, a meeting ID, a temporary password, an address on a bad line. If letters and numbers on the phone are hard for you, warm up first with the Phone Alphabet drill in the Networking Lab.</p>
-      <div class="actions"><button class="btn" data-script="76">Go to the first call</button><a class="btn secondary" href="https://senseicoach.github.io/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">Open the Phone Alphabet drill ↗</a></div>
+      <div class="actions"><button class="btn" data-script="76">Go to the first call</button><a class="btn secondary" href="https://executiveclass.ca/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">Open the Phone Alphabet drill ↗</a></div>
     </div>
     <h3 class="sec">Six rounds for every script</h3>
     <p class="sub">Do them in order. Most people need 20 to 30 minutes per script.</p>
@@ -654,7 +654,7 @@ function renderPanel(s) {
     <div class="field"><label for="gist">Your answers</label><textarea id="gist" class="short">${esc(ST.gist)}</textarea></div>${nextRow(k)}`;
   if (k === 1) P.innerHTML = `<h3>Round 2: Transcribe</h3>
     <p class="hint">Play one sentence at a time and write exactly what you hear. Replay a sentence as many times as you need. If you can't hear a word, leave a space and keep going.</p>
-    ${s.part === 9 ? `<div class="spelltip"><b>Taking It Down tip:</b> write spelled letters with hyphens (O-L-I-V-E-I-R-A), phone numbers with dashes (604-555-0157), and emails the way you would type them (larissa.oliveira@cedarpoint.ca). Need practice with letters and numbers first? Try the <a href="https://senseicoach.github.io/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">Phone Alphabet drill</a>.</div>` : ""}${playerHTML({ lines: true })}${dialogueHTML(s, false)}${answerBox}${nextRow(k)}`;
+    ${s.part === 9 ? `<div class="spelltip"><b>Taking It Down tip:</b> write spelled letters with hyphens (O-L-I-V-E-I-R-A), phone numbers with dashes (604-555-0157), and emails the way you would type them (larissa.oliveira@cedarpoint.ca). Need practice with letters and numbers first? Try the <a href="https://executiveclass.ca/NETWORKING-LAB/#alphabet" target="_blank" rel="noopener">Phone Alphabet drill</a>.</div>` : ""}${playerHTML({ lines: true })}${dialogueHTML(s, false)}${answerBox}${nextRow(k)}`;
   if (k === 2) P.innerHTML = `<h3>Round 3: Listen again and fix</h3>
     <p class="hint">Play the whole conversation from the beginning and follow your transcription. Fix anything you're unsure about. Listen closely for the small words: <i>a, the, to, of, it's, don't, that</i>.</p>
     ${playerHTML()}${answerBox}${nextRow(k)}`;
